@@ -28,7 +28,7 @@ KANDUNGAN:
    - Paste keseluruhan kandungan Code.gs dalam fail Code.gs.
    - Project Settings > Script properties > Add script property:
          Property: PAJSK_FOLDER_ID
-         Value: ID_FOLDER_DRIVE_ANDA
+         Value: 1qXxfrHxO1lRHIrAlvWqmOv9nQ5xVOYDX (sudah diset terus dalam Code.gs; property pilihan sahaja)
    - Deploy > New deployment > Web app.
    - Execute as: Me. Who has access: Anyone (untuk carian awam).
    - Authorize. Copy Web App URL berakhir /exec.
@@ -36,8 +36,8 @@ KANDUNGAN:
      Untuk rekod murid yang sensitif, pertimbangkan PIN kedua atau pengesahan penjaga.
 
 4) GITHUB
-   - Buka index.html, ubah CONFIG.APPS_SCRIPT_URL kepada URL /exec tadi.
-   - Ubah CONFIG.SCHOOL_NAME kepada nama sekolah.
+   - URL Apps Script sudah dimasukkan dalam index.html.
+   - Nama sekolah diset SK HICOM; ubah jika perlu.
    - Cipta repositori GitHub. Muat naik index.html SAHAJA (atau README yang tidak
      mengandungi maklumat murid). Tidak perlu upload Code.gs atau Python ke GitHub.
    - Settings > Pages > Deploy from a branch > main / (root) > Save.
@@ -62,3 +62,8 @@ PERLINDUNGAN DATA
 NOTA: Sistem ini bukan pemproses PDF pukal automatik di Drive; pemisahan dibuat
 menggunakan skrip Python pada komputer guru. Sambungan Drive tidak disediakan
 sehingga ID folder dan URL Apps Script anda diisi.
+
+KONFIGURASI TELAH DIISI:
+Drive folder ID: 1qXxfrHxO1lRHIrAlvWqmOv9nQ5xVOYDX
+Apps Script: https://script.google.com/macros/s/AKfycbygkrrttmHI1m2Ko_yE875W3QZpIf9Pm2K8Nmfjf9Pp8UrvlgRYOwUEgpGavG47Mxx9Yg/exec
+Jika menukar Code.gs dalam projek sedia ada, Deploy > Manage deployments > Edit > Version: New version > Deploy.

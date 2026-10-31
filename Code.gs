@@ -5,6 +5,7 @@
  * Jangan letakkan PDF murid dalam GitHub atau kongsi folder kepada umum.
  */
 const PROP_FOLDER = 'PAJSK_FOLDER_ID';
+const DEFAULT_FOLDER_ID = '1qXxfrHxO1lRHIrAlvWqmOv9nQ5xVOYDX';
 function doGet(e) {
   const q = (e && e.parameter) || {};
   const callback = String(q.callback || '');
@@ -17,7 +18,7 @@ function doGet(e) {
     if(q.action !== 'find') throw Error('Permintaan tidak sah.');
     const ic=String(q.ic || '');
     if(!/^\d{12}$/.test(ic)) throw Error('Nombor MyKad tidak sah.');
-    const folderId=PropertiesService.getScriptProperties().getProperty(PROP_FOLDER);
+    const folderId=PropertiesService.getScriptProperties().getProperty(PROP_FOLDER) || DEFAULT_FOLDER_ID;
     if(!folderId) throw Error('Pentadbir belum menetapkan folder Google Drive.');
     // Rate limit approximately per IC (not a replacement for strong authentication).
     const cache=CacheService.getScriptCache(),key='attempt_'+ic;
